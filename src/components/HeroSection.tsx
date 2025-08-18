@@ -29,9 +29,14 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 h-auto group"
-                onClick={() => setShowAssessment(true)}
+                onClick={() => {
+                  const formElement = document.getElementById('onboarding-form');
+                  if (formElement) {
+                    formElement.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
-                Take the 60-second assessment
+                Make your fitness plan
                 <svg 
                   className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" 
                   fill="none" 
