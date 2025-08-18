@@ -23,7 +23,12 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" className="group">
+              <Button variant="hero" size="xl" className="group" onClick={() => {
+                const formElement = document.getElementById('onboarding-form');
+                if (formElement) {
+                  formElement.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}>
                 Start Your Plan
                 <svg 
                   className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" 
@@ -34,7 +39,12 @@ const HeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Button>
-              <Button variant="outline" size="xl">
+              <Button variant="outline" size="xl" onClick={() => {
+                const howItWorksElement = document.querySelector('#how-it-works');
+                if (howItWorksElement) {
+                  howItWorksElement.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}>
                 See how it works
               </Button>
             </div>

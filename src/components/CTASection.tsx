@@ -21,6 +21,12 @@ const CTASection = () => {
               variant="secondary" 
               size="xl" 
               className="bg-white text-primary hover:bg-white/90 shadow-strong hover:shadow-glow"
+              onClick={() => {
+                const formElement = document.getElementById('onboarding-form');
+                if (formElement) {
+                  formElement.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Get My Plan
               <svg 
