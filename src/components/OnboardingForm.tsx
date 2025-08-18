@@ -5,6 +5,7 @@ import * as z from 'zod';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
+import { Form } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { FormData } from '@/types/form';
 import { BasicInfoStep } from './form-steps/BasicInfoStep';
@@ -161,30 +162,32 @@ export const OnboardingForm = () => {
       </CardHeader>
       
       <CardContent>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          {renderStep()}
-          
-          <div className="flex justify-between pt-6">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={prevStep}
-              disabled={currentStep === 1}
-            >
-              Previous
-            </Button>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            {renderStep()}
             
-            {currentStep === steps.length ? (
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? 'Generating...' : 'Generate My Plan'}
+            <div className="flex justify-between pt-6">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={prevStep}
+                disabled={currentStep === 1}
+              >
+                Previous
               </Button>
-            ) : (
-              <Button type="button" onClick={nextStep}>
-                Next
-              </Button>
-            )}
-          </div>
-        </form>
+              
+              {currentStep === steps.length ? (
+                <Button type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? 'Generating...' : 'Generate My Plan'}
+                </Button>
+              ) : (
+                <Button type="button" onClick={nextStep}>
+                  Next
+                </Button>
+              )}
+            </div>
+          </form>
+        </Form>
       </CardContent>
     </Card>
   );
