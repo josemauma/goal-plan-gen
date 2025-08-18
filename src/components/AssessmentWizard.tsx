@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
+import { Form } from '@/components/ui/form'
 import { BasicInfoStep } from '@/components/form-steps/BasicInfoStep'
 import { LifestyleStep } from '@/components/form-steps/LifestyleStep'
 import { GoalTimeframeStep } from '@/components/form-steps/GoalTimeframeStep'
@@ -173,11 +174,13 @@ export function AssessmentWizard({ open, onOpenChange }: AssessmentWizardProps) 
               <p className="text-sm text-muted-foreground">{currentStepData.help}</p>
             </div>
 
-            <div className="space-y-4">
-              {currentStep === 0 && <BasicInfoStep form={form} />}
-              {currentStep === 1 && <LifestyleStep form={form} />}
-              {currentStep === 2 && <GoalTimeframeStep form={form} />}
-            </div>
+            <Form {...form}>
+              <div className="space-y-4">
+                {currentStep === 0 && <BasicInfoStep form={form} />}
+                {currentStep === 1 && <LifestyleStep form={form} />}
+                {currentStep === 2 && <GoalTimeframeStep form={form} />}
+              </div>
+            </Form>
 
             <div className="flex justify-between pt-4">
               <Button
