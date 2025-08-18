@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import { Button } from "@/components/ui/button";
-import { AssessmentWizard } from "@/components/AssessmentWizard";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
-  const [showAssessment, setShowAssessment] = useState(false)
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
       <div className="container mx-auto px-4 py-20">
@@ -29,14 +28,9 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 h-auto group"
-                onClick={() => {
-                  const formElement = document.getElementById('onboarding-form');
-                  if (formElement) {
-                    formElement.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
+                onClick={() => navigate('/make-your-plan')}
               >
-                Make your fitness plan
+                Make your plan
                 <svg 
                   className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" 
                   fill="none" 
@@ -82,11 +76,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-      <AssessmentWizard 
-        open={showAssessment}
-        onOpenChange={setShowAssessment}
-      />
     </section>
   );
 };

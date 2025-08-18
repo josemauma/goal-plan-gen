@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Form } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
+import { useNavigate } from 'react-router-dom';
 import { FormData } from '@/types/form';
 import { BasicInfoStep } from './form-steps/BasicInfoStep';
 import { LifestyleStep } from './form-steps/LifestyleStep';
@@ -50,6 +51,7 @@ export const OnboardingForm = () => {
   const [selectedPlan, setSelectedPlan] = useState('plan_1m');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -79,12 +81,15 @@ export const OnboardingForm = () => {
     setIsSubmitting(true);
     try {
       const result = await submitToWebhook(data, selectedPlan);
+      
       if (result.success) {
-        setIsSubmitted(true);
         toast({
           title: "Plan generated!",
-          description: "Check your personalized recommendations below.",
+          description: "Your personalized nutrition and fitness plan is ready.",
         });
+        
+        // Navigate to plan ready page with form data
+        navigate('/plan-ready', { state: { formData: data } });
       } else {
         throw new Error(result.error);
       }
