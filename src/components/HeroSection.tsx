@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { Button } from "@/components/ui/button";
+import { AssessmentWizard } from "@/components/AssessmentWizard";
 import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
+  const [showAssessment, setShowAssessment] = useState(false)
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
       <div className="container mx-auto px-4 py-20">
@@ -23,13 +26,12 @@ const HeroSection = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" className="group" onClick={() => {
-                const formElement = document.getElementById('onboarding-form');
-                if (formElement) {
-                  formElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}>
-                Start Your Plan
+              <Button 
+                size="lg" 
+                className="text-lg px-8 py-6 h-auto group"
+                onClick={() => setShowAssessment(true)}
+              >
+                Take the 60-second assessment
                 <svg 
                   className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" 
                   fill="none" 
@@ -39,7 +41,10 @@ const HeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Button>
-              <Button variant="outline" size="xl" onClick={() => {
+              <p className="text-sm text-muted-foreground">
+                Evidence-based • Trainer-approved • PDF included
+              </p>
+              <Button variant="outline" size="lg" onClick={() => {
                 const howItWorksElement = document.querySelector('#how-it-works');
                 if (howItWorksElement) {
                   howItWorksElement.scrollIntoView({ behavior: 'smooth' });
@@ -72,6 +77,11 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+      <AssessmentWizard 
+        open={showAssessment}
+        onOpenChange={setShowAssessment}
+      />
     </section>
   );
 };
