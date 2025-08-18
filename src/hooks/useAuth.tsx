@@ -1,9 +1,15 @@
-import { createContext, useContext, useEffect, useState } from 'react'
-import { User } from '@supabase/supabase-js'
-import { supabase } from '@/lib/supabase'
+import { createContext, useContext, useState } from 'react'
+
+interface MockUser {
+  id: string
+  email: string
+  user_metadata: {
+    full_name?: string
+  }
+}
 
 interface AuthContextType {
-  user: User | null
+  user: MockUser | null
   loading: boolean
   signUp: (email: string, password: string, name?: string) => Promise<void>
   signIn: (email: string, password: string) => Promise<void>
@@ -14,59 +20,55 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null)
-      setLoading(false)
-    })
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null)
-      setLoading(false)
-    })
-
-    return () => subscription.unsubscribe()
-  }, [])
+  const [user, setUser] = useState<MockUser | null>(null)
+  const [loading, setLoading] = useState(false)
 
   const signUp = async (email: string, password: string, name?: string) => {
-    const { error } = await supabase.auth.signUp({
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    const mockUser: MockUser = {
+      id: 'mock-user-id',
       email,
-      password,
-      options: {
-        data: {
-          full_name: name,
-        },
+      user_metadata: {
+        full_name: name,
       },
-    })
-    if (error) throw error
+    }
+    setUser(mockUser)
   }
 
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    const mockUser: MockUser = {
+      id: 'mock-user-id',
       email,
-      password,
-    })
-    if (error) throw error
+      user_metadata: {
+        full_name: 'John Doe',
+      },
+    }
+    setUser(mockUser)
   }
 
   const signInWithGoogle = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: `${window.location.origin}/`,
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    const mockUser: MockUser = {
+      id: 'mock-user-id',
+      email: 'john.doe@gmail.com',
+      user_metadata: {
+        full_name: 'John Doe',
       },
-    })
-    if (error) throw error
+    }
+    setUser(mockUser)
   }
 
   const signOut = async () => {
-    const { error } = await supabase.auth.signOut()
-    if (error) throw error
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 500))
+    setUser(null)
   }
 
   const value = {

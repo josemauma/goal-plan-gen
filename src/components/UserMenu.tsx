@@ -1,4 +1,4 @@
-import { User } from '@supabase/supabase-js'
+// Mock user interface for UI preview
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,7 +13,13 @@ import { useToast } from '@/hooks/use-toast'
 import { User as UserIcon, LayoutDashboard, FileText, CreditCard, LogOut } from 'lucide-react'
 
 interface UserMenuProps {
-  user: User
+  user: {
+    id: string
+    email: string
+    user_metadata: {
+      full_name?: string
+    }
+  }
 }
 
 export function UserMenu({ user }: UserMenuProps) {
