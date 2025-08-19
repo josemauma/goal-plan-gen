@@ -10,20 +10,45 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { OnboardingForm } from "@/components/OnboardingForm";
 import { Toaster } from "@/components/ui/toaster";
+import WaveDivider from "@/components/WaveDivider";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
       <Header />
-      <HeroSection />
-      <HowItWorksSection />
-      <FeaturesSection />
-      <SamplePlanSection />
-      <TrustSection />
-      <TestimonialsSection />
+      
+      <div className="section-transition section-primary">
+        <HeroSection />
+      </div>
+      
+      <WaveDivider color="hsl(180 40% 96%)" />
+      <div className="section-transition section-secondary">
+        <HowItWorksSection />
+      </div>
+      
+      <WaveDivider color="hsl(220 30% 97%)" />
+      <div className="section-transition section-alternate">
+        <FeaturesSection />
+      </div>
+      
+      <WaveDivider color="hsl(200 50% 94%)" />
+      <div className="section-transition section-primary">
+        <SamplePlanSection />
+      </div>
+      
+      <WaveDivider color="hsl(180 40% 96%)" />
+      <div className="section-transition section-secondary">
+        <TrustSection />
+      </div>
+      
+      <WaveDivider color="hsl(220 30% 97%)" />
+      <div className="section-transition section-alternate">
+        <TestimonialsSection />
+      </div>
       
       {/* Form Section */}
-      <section id="onboarding-form" className="py-20 bg-muted/30">
+      <WaveDivider color="hsl(200 50% 94%)" />
+      <section id="onboarding-form" className="py-20 section-transition section-primary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
@@ -37,8 +62,16 @@ const Index = () => {
         </div>
       </section>
       
-      <CTASection />
-      <FAQSection />
+      <WaveDivider color="hsl(180 40% 96%)" />
+      <div className="section-transition section-secondary">
+        <CTASection />
+      </div>
+      
+      <WaveDivider color="hsl(220 30% 97%)" />
+      <div className="section-transition section-alternate">
+        <FAQSection />
+      </div>
+      
       <Footer />
       <Toaster />
     </main>

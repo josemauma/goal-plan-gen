@@ -23,7 +23,7 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-6 mb-16">
           <h2 className="heading-lg">Built for Real Life</h2>

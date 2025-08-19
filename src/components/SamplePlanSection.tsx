@@ -23,7 +23,7 @@ const SamplePlanSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-6 mb-16">
           <h2 className="heading-lg">See Your Plan in Action</h2>
