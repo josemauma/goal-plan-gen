@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = [
@@ -9,9 +10,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "Twitter", icon: "𝕏", href: "#twitter" },
-    { name: "Instagram", icon: "📷", href: "#instagram" },
-    { name: "LinkedIn", icon: "💼", href: "#linkedin" }
+    { name: "Twitter", icon: Twitter, href: "#twitter" },
+    { name: "Instagram", icon: Instagram, href: "#instagram" },
+    { name: "LinkedIn", icon: Linkedin, href: "#linkedin" }
   ];
 
   return (
@@ -65,16 +66,19 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-semibold text-white">Follow Us</h4>
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-smooth"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
+              {socialLinks.map((social, index) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white hover:bg-white/20 transition-smooth"
+                    aria-label={social.name}
+                  >
+                    <IconComponent size={20} />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
