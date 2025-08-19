@@ -7,21 +7,21 @@ const MakeYourPlan = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* Header */}
-      <header className="border-b border-border">
+      <header className="glass-header border-b border-white/10">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center space-x-2 text-sm text-muted-foreground">
             <Button 
               variant="ghost" 
               size="sm"
               onClick={() => navigate('/')}
-              className="p-0 h-auto font-normal hover:text-foreground"
+              className="p-0 h-auto font-normal hover:text-foreground text-white/80 hover:text-white"
             >
               Home
             </Button>
-            <span>/</span>
-            <span className="text-foreground">Make your plan</span>
+            <span className="text-white/60">/</span>
+            <span className="text-white">Make your plan</span>
           </nav>
         </div>
       </header>
@@ -29,10 +29,10 @@ const MakeYourPlan = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-12" style={{ maxWidth: '900px' }}>
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
             Tell us about you
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-white/80 max-w-2xl mx-auto drop-shadow-md">
             Answer a few questions so we can tailor your nutrition and workouts.
           </p>
         </div>

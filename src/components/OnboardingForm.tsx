@@ -155,15 +155,15 @@ export const OnboardingForm = () => {
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
+    <Card className="w-full max-w-2xl mx-auto glass-card border-white/20">
+      <CardHeader className="glass-header">
         <div className="flex justify-between items-center">
-          <CardTitle>{steps[currentStep - 1].title}</CardTitle>
+          <CardTitle className="text-foreground">{steps[currentStep - 1].title}</CardTitle>
           <span className="text-sm text-muted-foreground">
             Step {currentStep} of {steps.length}
           </span>
         </div>
-        <Progress value={(currentStep / steps.length) * 100} className="w-full" />
+        <Progress value={(currentStep / steps.length) * 100} className="w-full bg-white/10" />
       </CardHeader>
       
       <CardContent>
