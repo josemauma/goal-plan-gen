@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { useAuth } from '@/hooks/useAuth'
 import { AuthModal } from '@/components/AuthModal'
 import { UserMenu } from '@/components/UserMenu'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 export function Header() {
   const { user } = useAuth()
@@ -24,6 +25,7 @@ export function Header() {
           </div>
 
           <div className="flex items-center space-x-4">
+            <LanguageSwitcher />
             {user ? (
               <UserMenu user={user} />
             ) : (

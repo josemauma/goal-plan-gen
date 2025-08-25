@@ -1,26 +1,37 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
       <div className="container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
-          <div className="space-y-8 animate-fade-in">
+            <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <p className="body-base text-muted-foreground font-medium tracking-wide uppercase">
-                Nutrition and training made easy.
+                {t('hero.tagline')}
               </p>
               <h1 className="heading-xl max-w-4xl">
-                Your Nutrition & Fitness Plan,{" "}
-                <span className="text-gradient">Simplified.</span>
+                {t('hero.title').split('Simplificado.').length > 1 ? (
+                  <>
+                    {t('hero.title').split('Simplificado.')[0]}
+                    <span className="text-gradient">Simplificado.</span>
+                  </>
+                ) : (
+                  <>
+                    {t('hero.title').split('Simplified.')[0]}
+                    <span className="text-gradient">Simplified.</span>
+                  </>
+                )}
               </h1>
               <p className="body-lg text-muted-foreground max-w-2xl">
-                Set your goal — lose, gain, or maintain weight — and get a step-by-step plan 
-                tailored to your timeline.
+                {t('hero.description')}
               </p>
             </div>
             
@@ -30,7 +41,7 @@ const HeroSection = () => {
                 className="text-lg px-8 py-6 h-auto group"
                 onClick={() => navigate('/make-your-plan')}
               >
-                Make your plan
+                {t('hero.makeYourPlan')}
                 <svg 
                   className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" 
                   fill="none" 
@@ -46,7 +57,7 @@ const HeroSection = () => {
                   howItWorksElement.scrollIntoView({ behavior: 'smooth' });
                 }
               }}>
-                See how it works
+                {t('hero.seeHowItWorks')}
               </Button>
             </div>
           </div>

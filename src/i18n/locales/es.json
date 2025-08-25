@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "tagline": "Nutrición y entrenamiento hechos fáciles.",
+    "title": "Tu Plan de Nutrición y Fitness, Simplificado.",
+    "description": "Establece tu objetivo: perder, ganar o mantener peso, y obtén un plan paso a paso adaptado a tu cronograma.",
+    "makeYourPlan": "Crear tu plan",
+    "seeHowItWorks": "Ver cómo funciona",
+    "takesTime": "Toma menos de 2 minutos",
+    "free": "100% gratis"
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "description": "Progreso sin presión. Tres simples pasos para tu plan personalizado.",
+    "steps": {
+      "setGoal": {
+        "title": "Establece Tu Objetivo",
+        "description": "Dinos tu objetivo: elige pérdida, ganancia o mantenimiento de peso + tiempo estimado."
+      },
+      "getPlan": {
+        "title": "Obtén Tu Plan",
+        "description": "Generamos tu plan: nutrición balanceada + programa de ejercicios semanal."
+      },
+      "trackProgress": {
+        "title": "Rastrea Tu Progreso",
+        "description": "Sigue tu progreso: cumple, adapta y mantente consistente."
+      }
+    }
+  },
+  "features": {
+    "title": "Todo Lo Que Necesitas",
+    "description": "Planes de nutrición y fitness respaldados por ciencia, diseñados para la vida real.",
+    "personalizedNutrition": {
+      "title": "Nutrición Personalizada",
+      "description": "Planes de comidas personalizados basados en tus objetivos, preferencias y estilo de vida."
+    },
+    "workoutSchedules": {
+      "title": "Horarios de Ejercicio",
+      "description": "Rutinas de fitness estructuradas que se adaptan a tu horario y nivel de experiencia."
+    },
+    "progressTracking": {
+      "title": "Seguimiento de Progreso",
+      "description": "Monitorea tu progreso con herramientas de seguimiento fáciles de usar y perspectivas."
+    },
+    "expertGuidance": {
+      "title": "Orientación Experta",
+      "description": "Recomendaciones basadas en evidencia de nutricionistas y entrenadores certificados."
+    }
+  },
+  "samplePlan": {
+    "title": "Plan de Comidas de Ejemplo",
+    "description": "Así es como se ve un día típico con tu plan de nutrición personalizado.",
+    "breakfast": "Desayuno",
+    "lunch": "Almuerzo",
+    "dinner": "Cena",
+    "snacks": "Snacks"
+  },
+  "trust": {
+    "title": "Confiado por Miles",
+    "description": "Únete a la comunidad de personas que han transformado su salud con nuestros planes personalizados.",
+    "activeUsers": "Usuarios Activos",
+    "plansCreated": "Planes Creados",
+    "successRate": "Tasa de Éxito"
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Usuarios",
+    "description": "Resultados reales de personas reales que han transformado sus vidas."
+  },
+  "form": {
+    "title": "Obtén Tu Plan Personalizado",
+    "description": "Responde algunas preguntas y recibe tu plan personalizado de nutrición y fitness"
+  },
+  "cta": {
+    "title": "Comienza tu plan personalizado hoy.",
+    "description": "Únete a miles que han transformado su salud con planes de nutrición y fitness personalizados y respaldados por ciencia.",
+    "getMyPlan": "Obtener Mi Plan",
+    "setupTime": "Tiempo de configuración",
+    "always": "Siempre",
+    "access": "Acceso",
+    "quickInfo": "Toma menos de 2 minutos. 100% gratis."
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "description": "Todo lo que necesitas saber sobre nuestros planes personalizados de nutrición y fitness."
+  },
+  "footer": {
+    "tagline": "Tu viaje de salud, simplificado.",
+    "company": "Empresa",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "support": "Soporte",
+    "help": "Centro de Ayuda",
+    "community": "Comunidad",
+    "blog": "Blog",
+    "social": "Síguenos",
+    "rights": "Todos los derechos reservados."
+  },
+  "language": {
+    "english": "English",
+    "spanish": "Español"
+  }
+}

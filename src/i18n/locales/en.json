@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "tagline": "Nutrition and training made easy.",
+    "title": "Your Nutrition & Fitness Plan, Simplified.",
+    "description": "Set your goal — lose, gain, or maintain weight — and get a step-by-step plan tailored to your timeline.",
+    "makeYourPlan": "Make your plan",
+    "seeHowItWorks": "See how it works",
+    "takesTime": "Takes less than 2 minutes",
+    "free": "100% free"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "description": "Progress without pressure. Three simple steps to your personalized plan.",
+    "steps": {
+      "setGoal": {
+        "title": "Set Your Goal",
+        "description": "Tell us your goal — choose weight loss, gain, or maintenance + time frame."
+      },
+      "getPlan": {
+        "title": "Get Your Plan",
+        "description": "We generate your plan — balanced nutrition + weekly workout schedule."
+      },
+      "trackProgress": {
+        "title": "Track Progress",
+        "description": "Track your progress — follow, adapt, and stay consistent."
+      }
+    }
+  },
+  "features": {
+    "title": "Everything You Need",
+    "description": "Science-backed nutrition and fitness plans designed for real life.",
+    "personalizedNutrition": {
+      "title": "Personalized Nutrition",
+      "description": "Custom meal plans based on your goals, preferences, and lifestyle."
+    },
+    "workoutSchedules": {
+      "title": "Workout Schedules",
+      "description": "Structured fitness routines that fit your schedule and experience level."
+    },
+    "progressTracking": {
+      "title": "Progress Tracking",
+      "description": "Monitor your journey with easy-to-use tracking tools and insights."
+    },
+    "expertGuidance": {
+      "title": "Expert Guidance",
+      "description": "Evidence-based recommendations from certified nutritionists and trainers."
+    }
+  },
+  "samplePlan": {
+    "title": "Sample Meal Plan",
+    "description": "Here's what a typical day looks like with your personalized nutrition plan.",
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner",
+    "snacks": "Snacks"
+  },
+  "trust": {
+    "title": "Trusted by Thousands",
+    "description": "Join the community of people who've transformed their health with our personalized plans.",
+    "activeUsers": "Active Users",
+    "plansCreated": "Plans Created",
+    "successRate": "Success Rate"
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "description": "Real results from real people who've transformed their lives."
+  },
+  "form": {
+    "title": "Get Your Personalized Plan",
+    "description": "Answer a few questions and receive your custom nutrition and fitness plan"
+  },
+  "cta": {
+    "title": "Start your personalized plan today.",
+    "description": "Join thousands who've transformed their health with science-backed, personalized nutrition and fitness plans.",
+    "getMyPlan": "Get My Plan",
+    "setupTime": "Setup time",
+    "always": "Always",
+    "access": "Access",
+    "quickInfo": "Takes less than 2 minutes. 100% free."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about our personalized nutrition and fitness plans."
+  },
+  "footer": {
+    "tagline": "Your health journey, simplified.",
+    "company": "Company",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "support": "Support",
+    "help": "Help Center",
+    "community": "Community",
+    "blog": "Blog",
+    "social": "Follow Us",
+    "rights": "All rights reserved."
+  },
+  "language": {
+    "english": "English",
+    "spanish": "Español"
+  }
+}

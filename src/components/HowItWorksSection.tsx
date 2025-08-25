@@ -1,21 +1,25 @@
+import { useTranslation } from "react-i18next";
+
 const HowItWorksSection = () => {
+  const { t } = useTranslation();
+  
   const steps = [
     {
       number: "01",
-      title: "Set Your Goal",
-      description: "Tell us your goal — choose weight loss, gain, or maintenance + time frame.",
+      title: t('howItWorks.steps.setGoal.title'),
+      description: t('howItWorks.steps.setGoal.description'),
       icon: "🎯"
     },
     {
       number: "02", 
-      title: "Get Your Plan",
-      description: "We generate your plan — balanced nutrition + weekly workout schedule.",
+      title: t('howItWorks.steps.getPlan.title'),
+      description: t('howItWorks.steps.getPlan.description'),
       icon: "📋"
     },
     {
       number: "03",
-      title: "Track Progress", 
-      description: "Track your progress — follow, adapt, and stay consistent.",
+      title: t('howItWorks.steps.trackProgress.title'), 
+      description: t('howItWorks.steps.trackProgress.description'),
       icon: "📈"
     }
   ];
@@ -24,9 +28,9 @@ const HowItWorksSection = () => {
     <section id="how-it-works" className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="heading-lg">How It Works</h2>
+          <h2 className="heading-lg">{t('howItWorks.title')}</h2>
           <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-            Progress without pressure. Three simple steps to your personalized plan.
+            {t('howItWorks.description')}
           </p>
         </div>
         
