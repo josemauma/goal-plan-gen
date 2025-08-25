@@ -24,7 +24,7 @@ const HeroSection = () => {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col items-center gap-4">
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 h-auto group"
@@ -40,9 +40,6 @@ const HeroSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Button>
-              <p className="text-sm text-muted-foreground">
-                Evidence-based • Trainer-approved • PDF included
-              </p>
               <Button variant="outline" size="lg" onClick={() => {
                 const howItWorksElement = document.querySelector('#how-it-works');
                 if (howItWorksElement) {
@@ -51,17 +48,6 @@ const HeroSection = () => {
               }}>
                 See how it works
               </Button>
-            </div>
-            
-            <div className="flex items-center space-x-6 pt-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-accent-green rounded-full"></div>
-                <span className="body-sm text-muted-foreground">Takes less than 2 minutes</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-accent-blue rounded-full"></div>
-                <span className="body-sm text-muted-foreground">100% free</span>
-              </div>
             </div>
           </div>
           
