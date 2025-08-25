@@ -21,33 +21,33 @@ const Index = () => {
         <HeroSection />
       </div>
       
-      <WaveDivider color="hsl(180 40% 96%)" />
+      <WaveDivider color="hsl(195 42% 94%)" />
       <div className="section-transition section-secondary">
         <HowItWorksSection />
       </div>
       
-      <WaveDivider color="hsl(220 30% 97%)" />
+      <WaveDivider color="hsl(185 38% 92%)" />
       <div className="section-transition section-alternate">
         <FeaturesSection />
       </div>
       
-      <WaveDivider color="hsl(200 50% 94%)" />
+      <WaveDivider color="hsl(175 33% 90%)" />
       <div className="section-transition section-primary">
         <SamplePlanSection />
       </div>
       
-      <WaveDivider color="hsl(180 40% 96%)" />
+      <WaveDivider color="hsl(195 42% 94%)" />
       <div className="section-transition section-secondary">
         <TrustSection />
       </div>
       
-      <WaveDivider color="hsl(220 30% 97%)" />
+      <WaveDivider color="hsl(185 38% 92%)" />
       <div className="section-transition section-alternate">
         <TestimonialsSection />
       </div>
       
       {/* Form Section */}
-      <WaveDivider color="hsl(200 50% 94%)" />
+      <WaveDivider color="hsl(175 33% 90%)" />
       <section id="onboarding-form" className="py-20 section-transition section-primary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -62,12 +62,12 @@ const Index = () => {
         </div>
       </section>
       
-      <WaveDivider color="hsl(180 40% 96%)" />
+      <WaveDivider color="hsl(195 42% 94%)" />
       <div className="section-transition section-secondary">
         <CTASection />
       </div>
       
-      <WaveDivider color="hsl(220 30% 97%)" />
+      <WaveDivider color="hsl(185 38% 92%)" />
       <div className="section-transition section-alternate">
         <FAQSection />
       </div>
