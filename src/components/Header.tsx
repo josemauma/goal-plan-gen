@@ -31,9 +31,9 @@ export function Header() {
             ) : (
               <>
                 <Button 
-                  variant="ghost" 
+                  variant="outline" 
                   onClick={() => setShowLoginModal(true)}
-                  className="hidden sm:inline-flex"
+                  className="hidden sm:inline-flex bg-white text-black border-white hover:bg-gray-100"
                 >
                   Log in
                 </Button>
